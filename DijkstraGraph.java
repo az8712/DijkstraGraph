@@ -1,11 +1,3 @@
-                                        // --== CS400 File Header Information ==--
-// Name: <your full name>
-// Email: <your @wisc.edu email address>
-// Group and Team: <your group name: two letters, and team color>
-// Group TA: <name of your group's ta>
-// Lecturer: <name of your lecturer>
-// Notes to Grader: <optional extra notes>
-
 import java.util.PriorityQueue;
 
 import static org.junit.Assert.assertEquals;
@@ -70,7 +62,6 @@ public class DijkstraGraph<NodeType, EdgeType extends Number>
      *         or when either start or end data do not correspond to a graph node
      */
     protected SearchNode computeShortestPath(NodeType start, NodeType end) {
-        // TODO: implement in step 6
         Node startNode = nodes.get(start);
         Node endNode = nodes.get(end);
 
@@ -117,7 +108,6 @@ public class DijkstraGraph<NodeType, EdgeType extends Number>
      * @return list of data item from node along this shortest path
      */
     public List<NodeType> shortestPathData(NodeType start, NodeType end) {
-        // TODO: implement in step 7
         List<NodeType> reversedPath = new LinkedList<>();
         SearchNode c = computeShortestPath(start, end);
         while (c != null) {
@@ -145,12 +135,10 @@ public class DijkstraGraph<NodeType, EdgeType extends Number>
      * @return the cost of the shortest path between these nodes
      */
     public double shortestPathCost(NodeType start, NodeType end) {
-        // TODO: implement in step 7
         SearchNode c = computeShortestPath(start, end);
         return c.cost;
     }
 
-    // TODO: implement 3+ tests in step 8.
     public class DijkstraGraphTests {
         DijkstraGraph<String, Integer> graph;
         @Before
